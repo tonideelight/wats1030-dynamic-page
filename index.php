@@ -1,5 +1,6 @@
 <?php
-  require_once(config.php);
+  require_once("lib/phpFlickr/phpFlickr.php");
+  require_once('config.php');
 ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -36,15 +37,13 @@
       <!-- Example row of columns -->
       <ul class="photo-gallery">
         <?php
-          require_once("lib/phpFlickr/phpFlickr.php");
           $f = new phpFlickr($API_KEY);
 
           $search = $f->photos_search(array("tags"=>$SEARCH_TAGS, "tag_mode"=>"any"));
 
-          foreach ($recent['photo'] as $photo) {
-              $owner = $f->people_getInfo($photo['owner']);
+          foreach ($search['photo'] as $photo) {
               echo "<li>";
-              echo "<a class='image-link' href='http://www.flickr.com/photos/" . $photo['owner'] . "/" . $photo['id'] . "/'>" . "<img src='http://farm" . $photo['farm'] . ".static.flickr.com/" . $photo['server'] . "/" . $photo['id'] . "_" . $photo['secret'] . "_s.jpg' alt='". $photo['title'] . "'/>" . "</a> <br>" . "<a class='owner-link' href='http://www.flickr.com/people/" . $photo['owner'] . "/'>" . $owner['username'] . "</a>";
+              echo "<a class='image-link' href='http://www.flickr.com/photos/" . $photo['owner'] . "/" . $photo['id'] . "/'>" . "<img src='http://farm" . $photo['farm'] . ".static.flickr.com/" . $photo['server'] . "/" . $photo['id'] . "_" . $photo['secret'] . "_s.jpg' alt='". $photo['title'] . "'/>" . "</a> <br>" . "<a class='owner-link' href='http://www.flickr.com/people/" . $photo['owner'] . "/'>credits</a>";
               echo "</li>";
           }
         ?>
