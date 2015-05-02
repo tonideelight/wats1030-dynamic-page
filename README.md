@@ -25,6 +25,7 @@ In order to succesfully complete this project, you must fulfill the following *b
   * An updated host config file has been supplied in `sample.host.config.conf`. It shows how to instruct Apache to display the `index.php` file by default.
 
 The *stretch requirements* are:
+
 1. Start with a blank machine and install Apache and PHP by hand.
 2. Enhance the layout or functionality of this page with CSS or Javscript.
 3. Modify the existing PHP to output a different formatting in the HTML to build a Bootstrap Carousel or to leverage another Javascript library to modify the presentation of the images.
