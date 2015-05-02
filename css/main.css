@@ -8,10 +8,19 @@ ul.photo-gallery {
 ul.photo-gallery li {
     display: inline-block;
     float:left;
+    text-align: center;
 }
 hr {
     clear: both;
     margin: 1em 0;
+}
+.owner-link {
+    color: rgba(240, 0, 0, 0.4);
+    text-decoration: none;
+}
+.owner-link:hover {
+    color: rgba(240, 0, 0, 1);
+    text-decoration: underline;
 }
 
 
