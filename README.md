@@ -1,8 +1,6 @@
 # wats1030-dynamic-page
 An assignment to deploy a simple dynamic file that requires students to properly set up a server capable of serving a simple PHP page.
 
-THIS REPO IS NOT YET READY FOR YOU TO DO WORK. THIS MESSAGE WILL BE REMOVED WHEN THE REPO IS READY.
-
 In order to learn more about how dynamic content is served, we will clone a repository containing a simple PHP site that should be processed and rendered by the web server. This is not the most complicated setup project we can imagine, but it should serve the purpose of providing a way for us to explore how web servers can allow different processors and interpreters to handle creating the response for the user. In this case, we will leverage the PHP interpreter that comes installed with the LAMP stack.
 
 ## Basic Requirements
