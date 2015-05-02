@@ -43,7 +43,7 @@
 
           foreach ($search['photo'] as $photo) {
               echo "<li>";
-              echo "<a class='image-link' href='http://www.flickr.com/photos/" . $photo['owner'] . "/" . $photo['id'] . "/'>" . "<img src='http://farm" . $photo['farm'] . ".static.flickr.com/" . $photo['server'] . "/" . $photo['id'] . "_" . $photo['secret'] . "_s.jpg' alt='". $photo['title'] . "'/>" . "</a> <br>" . "<a class='owner-link' href='http://www.flickr.com/people/" . $photo['owner'] . "/'>credits</a>";
+              echo "<a class='image-link' href='http://www.flickr.com/photos/" . $photo['owner'] . "/" . $photo['id'] . "/'>" . "<img class='img-circle' src='http://farm" . $photo['farm'] . ".static.flickr.com/" . $photo['server'] . "/" . $photo['id'] . "_" . $photo['secret'] . "_s.jpg' alt='". $photo['title'] . "'/>" . "</a> <br>" . "<a class='owner-link' href='http://www.flickr.com/people/" . $photo['owner'] . "/'>credits</a>";
               echo "</li>";
           }
         ?>

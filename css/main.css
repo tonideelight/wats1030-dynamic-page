@@ -1,9 +1,18 @@
-
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
+ul.photo-gallery {
+    list-style-type: none;
+}
+ul.photo-gallery li {
+    display: inline-block;
+    float:left;
+}
+hr {
+    clear: both;
+    margin: 1em 0;
+}
 
 
 
