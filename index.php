@@ -9,8 +9,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
+        <title><?php echo $PAGE_TITLE; ?></title>
+        <meta name="description" content="A Flickr search on $SEARCH_TAGS.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
@@ -32,14 +32,14 @@
         <![endif]-->
 
     <div class="container">
-      <h1>Photos about <?php echo $config['SEARCH_TERM']; ?></h1>
+      <h1><?php echo $PAGE_TITLE; ?></h1>
       <!-- Example row of columns -->
       <ul class="photo-gallery">
         <?php
           require_once("lib/phpFlickr/phpFlickr.php");
           $f = new phpFlickr($API_KEY);
 
-          $recent = $f->photos_getRecent();
+          $search = $f->photos_search(array("tags"=>$SEARCH_TAGS, "tag_mode"=>"any"));
 
           foreach ($recent['photo'] as $photo) {
               $owner = $f->people_getInfo($photo['owner']);
